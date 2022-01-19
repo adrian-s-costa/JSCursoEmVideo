@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN MULTAS BABACK</title>
+    <style>
+        input#botao{
+            margin-top: 40px;
+        }
+        body{
+            text-align: center;
+            background-color: aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Vem venha tomar sua multa seu otario</h1>
+    <h2>Digite sua velocidade seu MANE</h2>
+   Velocidade: <input type="number" name="txtvel" id="txtvel"> Km/h <br>
+    <input type="button" value="verificar" id="botao" onclick="calcular()">
+    <div id="res">
+    </div>
+    <script>
+        function calcular(){
+            var txtv = window.document.getElementById('txtvel')
+            var vel = Number(txtv.value)
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `<p>Sua velocidade atual é de <strong> ${vel}Km/h</strong>`
+            if (vel > 80) {
+                res.innerHTML += `MUL tado seu <strong> estranho </strong>`
+                res.innerHTML += `<p>Bora pro DP seu bisonho`
+            }else{
+                res.innerHTML += `vem venha tranquilo ta limpo fella`
+                res.innerHTML += `<p>Dirija sempre com cuidado seu bunda mole!`
+            }
+                
+        }
+        
+
+    </script>
+</body>
+</html>

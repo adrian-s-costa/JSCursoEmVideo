@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor de GRINGO</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: darkseagreen;
+        }
+        input#verifica{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+   <h1>De onde vens marica?</h1> 
+   eu vim do(a) <input type="text" name="cidade" id="cidade">
+   <br> 
+   <input type="button" value="verifica" id="verifica" onclick="calc()">
+   <div id="lugar"></div>
+   <script>
+       function calc() {
+            var cidade = window.document.getElementById('cidade')
+            var cid = String(cidade.value)
+            var lugar = window.document.querySelector('div#lugar')
+            lugar.innerHTML = `<p>Voce veio de <strong> ${cid} </strong> certoa? `
+            if ( cid == 'brasil' || cid == 'Brasil') {
+                lugar.innerHTML += `Certoa <strong> brasileiro </strong> confirmado!`
+        
+            }else{
+                lugar.innerHTML += `<h1> É NÉ </H1>`
+                lugar.innerHTML += `<h2> come to brazil gringo safado!! </H2>`
+            }
+       }
+   </script>
+</body>
+</html>
